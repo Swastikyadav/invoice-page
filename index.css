@@ -1,0 +1,211 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar CSS */
+aside {
+  width: 250px;
+  height: 100vh;
+  background: blueviolet;
+  position: fixed;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.aside-wrapper {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.logo-text {
+  font-size: 32px;
+  position: relative;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 5px;
+  left: 205px;
+  background: blueviolet;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 18px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+/* Main CSS */
+main {
+  width: 100%;
+  height: 100%;
+  background: rgb(247, 247, 247);
+}
+
+.main-wrapper {
+  padding: 50px 100px;
+  margin: 0 100px;
+}
+
+.fas {
+  width: 50px;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ .aside-wrapper {
+  left: -250px;
+}
+
+/* Main element header */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+header span {
+  font-weight: 600;
+}
+
+header select {
+  padding: 4px;
+}
+
+header .fas {
+  color: blueviolet;
+  font-size: 20px;
+}
+
+/* Info Card */
+.info-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 45%;
+}
+
+.badge {
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.badge-paid {
+  background: lightgreen;
+}
+
+.badge-pending {
+  background: skyblue;
+}
+
+.badge-draft {
+  background: orange;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-via {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Invoices Header */
+.invoices-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  align-items: center;
+}
+
+.invoices-header p {
+  font-weight: 600;
+}
+
+.invoices-header button {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  background: blueviolet;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  min-width: 600px;
+  width: 100%;
+}
+
+table tr {
+  background: #fff;
+  text-align: center;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+
+.table-div {
+  overflow-x: auto;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+@media all and (max-width: 1050px) {
+  .main-wrapper {
+    margin: 0;
+    padding: 50px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .main-wrapper {
+    padding: 15px;
+  }
+
+  .card-section {
+    width: 95%;
+    display: block;
+  }
+
+  .card-section .info-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .card-section {
+    width: 90%;
+  }
+}
